@@ -53,6 +53,7 @@ public class AlertTimerTask extends TimerTask
             message.setFrom( from );
             message.setTo( record.getTo() );
             message.setBody( record.getText() );
+            message.setType( Message.Type.chat );
 
             // Send the message.
             XMPPServer.getInstance().getMessageRouter().route( message );
