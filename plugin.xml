@@ -4,8 +4,8 @@
     <name>MessageAlerts</name>
     <description>Generates message alerts based on database content.</description>
     <author>Guus der Kinderen</author>
-    <version>1.0.0</version>
-    <date>04/20/2018</date>
+    <version>1.1.0-SNAPSHOT</version>
+    <date>04/22/2018</date>
     <databaseKey>messagealerts</databaseKey>
     <databaseVersion>0</databaseVersion>
 </plugin>
