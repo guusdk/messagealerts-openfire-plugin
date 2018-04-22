@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+            <artifactId>plugins</artifactId>
+            <groupId>org.igniterealtime.openfire</groupId>
+            <version>4.2.0</version>
+	</parent>
+
+    <groupId>nl.goodbytes.openfire.plugins</groupId>
+    <artifactId>messagealerts</artifactId>
+    <version>1.0.0</version>
+    <name>MessageAlerts Plugin</name>
+    <description>An Openfire plugin that generates message alerts based on database content, developed for Alex Zimnitski.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>guusdk</id>
+            <name>Guus der Kinderen</name>
+            <email>guus@goodbytes.nl</email>
+            <organization>GoodBytes</organization>
+            <organizationUrl>https://goodbytes.nl</organizationUrl>
+        </developer>
+    </developers>
+
+    <build>
+        <sourceDirectory>src/java</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.6</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.igniterealtime.openfire.plugins</groupId>
+                        <artifactId>openfire-plugin-assembly-descriptor</artifactId>
+                        <version>${openfire.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <finalName>${plugin.name}</finalName>
+                            <attach>false</attach>
+                            <!-- This is where we use our shared assembly descriptor -->
+                            <descriptorRefs>
+                                <descriptorRef>openfire-plugin-assembly</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.0.0</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.igniterealtime.openfire</groupId>
+            <artifactId>xmppserver</artifactId>
+            <version>4.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>igniterealtime</id>
+            <name>Ignite Realtime Repository (Snapshots)</name>
+            <url>http://igniterealtime.org/repo/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>igniterealtime</id>
+            <name>Ignite Realtime Repository (Snapshots)</name>
+            <url>http://igniterealtime.org/repo/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

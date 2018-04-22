@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>MessageAlerts Plugin Readme</title>
+    <style type="text/css">
+        BODY {
+            font-size : 100%;
+        }
+        BODY, TD, TH {
+            font-family : tahoma, verdana, arial, helvetica, sans-serif;
+            font-size : 0.8em;
+        }
+        H3 {
+            font-size : 10pt;
+            font-style: italic;
+            color: #004444;
+        }
+        H2 {
+             font-size : 10pt;
+             font-weight : bold;
+        }
+        A:hover {
+            text-decoration : none;
+        }
+        H1 {
+            font-family : tahoma, arial, helvetica, sans-serif;
+            font-size : 1.4em;
+            font-weight: bold;
+            border-bottom : 1px #ccc solid;
+            padding-bottom : 2px;
+        }
+
+        TT {
+            font-family : courier new;
+            font-weight : bold;
+            color : #060;
+        }
+        PRE {
+            font-family : courier new;
+            font-size : 100%;
+        }
+        #datatable TH {
+            color : #fff;
+            background-color : #2A448C;
+            text-align : left;
+        }
+        #datatable TD {
+            background-color : #FAF6EF;
+        }
+        #datatable .name {
+            background-color : #DCE2F5;
+        }
+    </style>
+</head>
+<body>
+
+<h1>
+    MessageAlerts Plugin Readme
+</h1>
+
+<h2>Overview</h2>
+
+<p>
+    The MessageAlerts plugin periodically reads from a database table, and sends alerts to JIDs found in that table.</a>.
+</p>
+
+<h2>Installation</h2>
+
+<p>
+    Copy messagealerts.jar into the plugins directory of your Openfire installation. The plugin will then be automatically
+    deployed. To upgrade to a new version, copy the new candy.jar file over the existing file.
+</p>
+
+<h2>Configuration</h2>
+
+<p>
+    To configure this plugin, the following properties are used:
+</p>
+
+<ul>
+    <li><tt>messagealerts.from</tt> - The that is the sender of the messages. Defaults to the server address.</li>
+    <li><tt>messagealerts.frequency</tt> - The amount of seconds between each iteration. Defaults to 60.</li>
+</ul>
+
+
+</body>
+</html>
