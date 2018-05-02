@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/guusdk/messagealerts-openfire-plugin.svg?branch=master)](https://travis-ci.org/guusdk/messagealerts-openfire-plugin)
+
 The MessageAlerts Plugin is a plugin for the [Openfire XMPP server](https://www.igniterealtime.org/openfire), which periodically reads from a database table, and sends alerts to JIDs found in that table.
 
 Building
