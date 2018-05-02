@@ -18,6 +18,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <issueManagement>
+        <url>https://github.com/guusdk/messagealerts-openfire-plugin</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <scm>
+        <url>https://github.com/guusdk/messagealerts-openfire-plugin</url>
+        <connection>scm:git:git://github.com/guusdk/messagealerts-openfire-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com/guusdk/messagealerts-openfire-plugin.git</developerConnection>
+    </scm>
+
     <developers>
         <developer>
             <id>guusdk</id>
