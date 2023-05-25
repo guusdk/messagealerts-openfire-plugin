@@ -5,7 +5,7 @@
 	<parent>
             <artifactId>plugins</artifactId>
             <groupId>org.igniterealtime.openfire</groupId>
-            <version>4.2.0</version>
+            <version>4.7.5</version>
 	</parent>
 
     <groupId>nl.goodbytes.openfire.plugins</groupId>
@@ -90,39 +90,24 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.igniterealtime.openfire</groupId>
-            <artifactId>xmppserver</artifactId>
-            <version>4.2.0</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-
     <repositories>
+        <!-- Where dependencies are obtained (such as the parent project). -->
         <repository>
             <id>igniterealtime</id>
-            <name>Ignite Realtime Repository (Snapshots)</name>
-            <url>http://igniterealtime.org/repo/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <name>Ignite Realtime Repository</name>
+            <url>https://igniterealtime.org/archiva/repository/maven/</url>
         </repository>
     </repositories>
+
     <pluginRepositories>
+        <!-- Typically used to retrieve Maven plugins that are used by this project.
+             This apparently is also used to botain the dependencies _used by_ these
+             plugins (such as the openfire-plugin-assembly-descriptor, needed to
+             package the project as an Openfire plugin!) -->
         <pluginRepository>
             <id>igniterealtime</id>
-            <name>Ignite Realtime Repository (Snapshots)</name>
-            <url>http://igniterealtime.org/repo/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <name>Ignite Realtime Repository</name>
+            <url>https://igniterealtime.org/archiva/repository/maven/</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
